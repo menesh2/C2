@@ -9,6 +9,9 @@ import UIKit
 
 protocol PhotosListViewModelType {
     var delegate: PhotosListViewModelDelegate? {get set}
+    func numberOfSections() -> Int
+    func numberOfRows() -> Int
+    func getPhotoForIndex(index: Int) -> PhotoItem
 }
 
 protocol PhotosListViewModelDelegate: class {
@@ -16,14 +19,31 @@ protocol PhotosListViewModelDelegate: class {
 }
 
 class PhotosListViewModel: PhotosListViewModelType {
+    
     weak var delegate: PhotosListViewModelDelegate?
-    var photosInteractor: PhotosListInteractorType
+    private var photosInteractor: PhotosListInteractorType
     
     private var photosList = [PhotoItem]()
     
     init(photosListInteractor: PhotosListInteractorType) {
         self.photosInteractor = photosListInteractor
         self.photosInteractor.delegate = self
+    }
+    
+    func numberOfSections() -> Int {
+        if self.photosList.isEmpty {
+            return 0
+        }
+        
+        return 1
+    }
+    
+    func numberOfRows() -> Int {
+        return self.photosList.count
+    }
+    
+    func getPhotoForIndex(index: Int) -> PhotoItem {
+        return self.photosList[index]
     }
 }
 

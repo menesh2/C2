@@ -23,10 +23,10 @@ class PhotosListInteractor: PhotosListInteractorType {
     init() {
         self.getAllPhotos()
     }
+    
     func getAllPhotos() {
         
         Alamofire.request("https://jsonplaceholder.typicode.com/photos").responseJSON { response in
-            print("response arrived: \(response)")
             guard let responseData = response.data else {
                 print("didn't get any data from API")
                 return
@@ -35,7 +35,7 @@ class PhotosListInteractor: PhotosListInteractorType {
             do {
                 let decoder = JSONDecoder()
                 let photosList = try decoder.decode([PhotoItem].self, from: responseData)
-                print("after parsing: \(photosList)")
+                self.delegate?.photosListArrived(photosList: photosList)
             } catch {
                 print("error trying to decode response")
             }
