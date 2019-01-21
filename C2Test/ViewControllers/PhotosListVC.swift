@@ -29,6 +29,7 @@ class PhotosListVC: UIViewController {
         self.photosTableView.dataSource = self
         self.photosTableView.register(PhotosListCell.self, forCellReuseIdentifier: self.cellId)
         self.viewModel.delegate = self
+        self.title = "Photos list"
     }
     
     private func layoutViews() {
