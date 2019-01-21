@@ -18,6 +18,9 @@
 		76BCE67F21F6036E00C9FC62 /* PhotosListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE67E21F6036E00C9FC62 /* PhotosListInteractor.swift */; };
 		76BCE68221F605AF00C9FC62 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE68121F605AF00C9FC62 /* PhotoItem.swift */; };
 		76BCE68521F6125300C9FC62 /* PhotosListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE68421F6125300C9FC62 /* PhotosListCell.swift */; };
+		76BCE68721F61B3300C9FC62 /* AssemblyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE68621F61B3300C9FC62 /* AssemblyFactory.swift */; };
+		76BCE68921F61C9E00C9FC62 /* DisplayPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE68821F61C9E00C9FC62 /* DisplayPhotoVC.swift */; };
+		76BCE68B21F61D8F00C9FC62 /* DisplayPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE68A21F61D8F00C9FC62 /* DisplayPhotoViewModel.swift */; };
 		FF30200EFD99572A3A9A8AD0 /* Pods_C2TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396844B9257750845DECD5E5 /* Pods_C2TestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		76BCE67E21F6036E00C9FC62 /* PhotosListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListInteractor.swift; sourceTree = "<group>"; };
 		76BCE68121F605AF00C9FC62 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		76BCE68421F6125300C9FC62 /* PhotosListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListCell.swift; sourceTree = "<group>"; };
+		76BCE68621F61B3300C9FC62 /* AssemblyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyFactory.swift; sourceTree = "<group>"; };
+		76BCE68821F61C9E00C9FC62 /* DisplayPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPhotoVC.swift; sourceTree = "<group>"; };
+		76BCE68A21F61D8F00C9FC62 /* DisplayPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPhotoViewModel.swift; sourceTree = "<group>"; };
 		B8F025BDFBB8DD1E71735D50 /* Pods-C2Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C2Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-C2Test/Pods-C2Test.release.xcconfig"; sourceTree = "<group>"; };
 		C583C1763F3AA44BFD170141 /* Pods-C2TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C2TestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-C2TestTests/Pods-C2TestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				76BCE65321F5F05900C9FC62 /* PhotosListVC.swift */,
+				76BCE68821F61C9E00C9FC62 /* DisplayPhotoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				76BCE67421F5F54300C9FC62 /* Assembly.swift */,
+				76BCE68621F61B3300C9FC62 /* AssemblyFactory.swift */,
 			);
 			path = "Dependency Injection";
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				76BCE67921F5FC1B00C9FC62 /* PhotosListViewModel.swift */,
+				76BCE68A21F61D8F00C9FC62 /* DisplayPhotoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -353,6 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BCE68B21F61D8F00C9FC62 /* DisplayPhotoViewModel.swift in Sources */,
+				76BCE68921F61C9E00C9FC62 /* DisplayPhotoVC.swift in Sources */,
+				76BCE68721F61B3300C9FC62 /* AssemblyFactory.swift in Sources */,
 				76BCE65421F5F05900C9FC62 /* PhotosListVC.swift in Sources */,
 				76BCE67A21F5FC1B00C9FC62 /* PhotosListViewModel.swift in Sources */,
 				76BCE67F21F6036E00C9FC62 /* PhotosListInteractor.swift in Sources */,

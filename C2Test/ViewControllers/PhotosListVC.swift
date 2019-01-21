@@ -11,10 +11,13 @@ import Cartography
 class PhotosListVC: UIViewController {
     private let cellId = "PhotoListCell"
     private var viewModel : PhotosListViewModelType
+    private let displayPhotoVCFactory: DisplayPhotoVCFactory
+    
     private let photosTableView = UITableView()
     
-    init(photosListViewModel: PhotosListViewModelType) {
+    init(photosListViewModel: PhotosListViewModelType, displayPhotoVCFactory: DisplayPhotoVCFactory) {
         self.viewModel = photosListViewModel
+        self.displayPhotoVCFactory = displayPhotoVCFactory
         super.init(nibName: nil, bundle: nil)
         self.layoutViews()
         self.setupViews()
@@ -65,5 +68,11 @@ extension PhotosListVC: UITableViewDataSource, UITableViewDelegate {
         photoCell.setNumber("\(indexPath.row)")
         photoCell.setTitle(photoItem.title)
         return photoCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let photoItem = self.viewModel.getPhotoForIndex(index: indexPath.row)
+        let displayPhotoVC = self.displayPhotoVCFactory.create(photoItem: photoItem)
+        self.navigationController?.pushViewController(displayPhotoVC, animated: true)
     }
 }
