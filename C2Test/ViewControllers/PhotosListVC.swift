@@ -6,15 +6,25 @@
 //
 
 import UIKit
+import Cartography
 
 class PhotosListVC: UIViewController {
     
-    let viewModel : PhotosListViewModelType
+    private let viewModel : PhotosListViewModelType
+    private let photosListView = UITableView()
     
     init(photosListViewModelType: PhotosListViewModelType) {
         self.viewModel = photosListViewModelType
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = UIColor.green
+        self.layoutViews()
+    }
+    
+    private func layoutViews() {
+        self.view.addSubview(self.photosListView)
+        
+        constrain(self.view, self.photosListView) { container, tableView in
+            tableView.edges == container.edges
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

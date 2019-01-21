@@ -9,6 +9,7 @@ target 'C2Test' do
   pod 'Alamofire'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
+  pod 'Cartography'
 
   target 'C2TestTests' do
     inherit! :search_paths

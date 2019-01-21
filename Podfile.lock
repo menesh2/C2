@@ -1,25 +1,29 @@
 PODS:
   - Alamofire (4.8.0)
+  - Cartography (3.1.0)
   - Swinject (2.5.0)
   - SwinjectAutoregistration (2.5.1):
     - Swinject (~> 2.5)
 
 DEPENDENCIES:
   - Alamofire
+  - Cartography
   - Swinject
   - SwinjectAutoregistration
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Cartography
     - Swinject
     - SwinjectAutoregistration
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
   SwinjectAutoregistration: f72bf894cbd2ee4a9153e00fa5208e93fb44d283
 
-PODFILE CHECKSUM: d0572a2b8d530d9cfbd31de4c0d5c28d26c74694
+PODFILE CHECKSUM: 47644c5319ff12259feb1ed904f1c2cbc433b16a
 
 COCOAPODS: 1.5.3

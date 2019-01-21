@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E24503A37D0702737156425A727E1FCE"
-               BlueprintName = "SwinjectAutoregistration"
+               BlueprintIdentifier = "05B5E6B6BF53C2C31E616E4C5644E8BB"
+               BlueprintName = "Cartography"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SwinjectAutoregistration.framework">
+               BuildableName = "Cartography.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
