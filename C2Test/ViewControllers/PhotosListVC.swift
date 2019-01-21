@@ -14,6 +14,7 @@ class PhotosListVC: UIViewController {
     private let displayPhotoVCFactory: DisplayPhotoVCFactory
     
     private let photosTableView = UITableView()
+    private let loadingView = LoadingView()
     
     init(photosListViewModel: PhotosListViewModelType, displayPhotoVCFactory: DisplayPhotoVCFactory) {
         self.viewModel = photosListViewModel
@@ -32,9 +33,11 @@ class PhotosListVC: UIViewController {
     
     private func layoutViews() {
         self.view.addSubview(self.photosTableView)
+        self.view.addSubview(self.loadingView)
         
-        constrain(self.view, self.photosTableView) { container, tableView in
+        constrain(self.view, self.photosTableView, self.loadingView) { container, tableView, loadingView in
             tableView.edges == container.edges
+            loadingView.edges == container.edges
         }
     }
     
@@ -45,6 +48,7 @@ class PhotosListVC: UIViewController {
 
 extension PhotosListVC: PhotosListViewModelDelegate {
     func reloadData() {
+        self.loadingView.hideLoadingWithAnimation()
         self.photosTableView.reloadData()
     }
 }

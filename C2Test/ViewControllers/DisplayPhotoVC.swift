@@ -12,6 +12,7 @@ class DisplayPhotoVC: UIViewController {
     
     private let titleLabel = UILabel()
     private let imageView = UIImageView()
+    private let loadingView = LoadingView()
 
     private let verticalPadding = CGFloat(10)
     private let horizontalPadding = CGFloat(20)
@@ -32,14 +33,16 @@ class DisplayPhotoVC: UIViewController {
     private func layoutViews() {
         self.view.addSubview(self.titleLabel)
         self.view.addSubview(self.imageView)
-        
-        constrain(self.view, self.titleLabel, self.imageView) { [weak self] container, titleLabel, imageView in
+        self.view.addSubview(self.loadingView)
+        constrain(self.view, self.titleLabel, self.imageView, self.loadingView) { [weak self] container, titleLabel, imageView, loadingView in
             titleLabel.top == container.topMargin + (self?.verticalPadding ?? 0)
             titleLabel.leading == container.leading + (self?.horizontalPadding ?? 0)
             titleLabel.trailing == container.trailing - (self?.horizontalPadding ?? 0)
             
             imageView.centerX == container.centerX
             imageView.centerY == container.centerY
+            
+            loadingView.edges == container.edges
         }
     }
     
@@ -58,5 +61,6 @@ extension DisplayPhotoVC: DisplayPhotoViewModelDelegate {
     func showImage(_ image: UIImage) {
         self.imageView.image = image
         self.imageView.layoutIfNeeded()
+        self.loadingView.hideLoadingWithAnimation()
     }
 }
