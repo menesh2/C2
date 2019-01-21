@@ -23,6 +23,9 @@ class Assembly {
         
         //MARK: - ViewModels registration
         self.container.autoregister(PhotosListViewModelType.self, initializer: PhotosListViewModel.init)
+        
+        //MARK: - Interactors registration
+        self.container.autoregister(PhotosListInteractorType.self, initializer: PhotosListInteractor.init)
     }
     
     func getRootViewController() -> UIViewController {

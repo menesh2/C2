@@ -15,6 +15,8 @@
 		76BCE66721F5F05A00C9FC62 /* C2TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE66621F5F05A00C9FC62 /* C2TestTests.swift */; };
 		76BCE67521F5F54300C9FC62 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE67421F5F54300C9FC62 /* Assembly.swift */; };
 		76BCE67A21F5FC1B00C9FC62 /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE67921F5FC1B00C9FC62 /* PhotosListViewModel.swift */; };
+		76BCE67F21F6036E00C9FC62 /* PhotosListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE67E21F6036E00C9FC62 /* PhotosListInteractor.swift */; };
+		76BCE68221F605AF00C9FC62 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BCE68121F605AF00C9FC62 /* PhotoItem.swift */; };
 		FF30200EFD99572A3A9A8AD0 /* Pods_C2TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396844B9257750845DECD5E5 /* Pods_C2TestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		76BCE66821F5F05A00C9FC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76BCE67421F5F54300C9FC62 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		76BCE67921F5FC1B00C9FC62 /* PhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModel.swift; sourceTree = "<group>"; };
+		76BCE67E21F6036E00C9FC62 /* PhotosListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListInteractor.swift; sourceTree = "<group>"; };
+		76BCE68121F605AF00C9FC62 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		B8F025BDFBB8DD1E71735D50 /* Pods-C2Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C2Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-C2Test/Pods-C2Test.release.xcconfig"; sourceTree = "<group>"; };
 		C583C1763F3AA44BFD170141 /* Pods-C2TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C2TestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-C2TestTests/Pods-C2TestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +115,8 @@
 		76BCE65021F5F05900C9FC62 /* C2Test */ = {
 			isa = PBXGroup;
 			children = (
+				76BCE68021F6059500C9FC62 /* Entities */,
+				76BCE67D21F6034900C9FC62 /* Interactors */,
 				76BCE67821F5FBFF00C9FC62 /* ViewModels */,
 				76BCE67321F5F51700C9FC62 /* Dependency Injection */,
 				76BCE67221F5F4A000C9FC62 /* ViewControllers */,
@@ -153,6 +159,22 @@
 				76BCE67921F5FC1B00C9FC62 /* PhotosListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		76BCE67D21F6034900C9FC62 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				76BCE67E21F6036E00C9FC62 /* PhotosListInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		76BCE68021F6059500C9FC62 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				76BCE68121F605AF00C9FC62 /* PhotoItem.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,8 +344,10 @@
 			files = (
 				76BCE65421F5F05900C9FC62 /* PhotosListVC.swift in Sources */,
 				76BCE67A21F5FC1B00C9FC62 /* PhotosListViewModel.swift in Sources */,
+				76BCE67F21F6036E00C9FC62 /* PhotosListInteractor.swift in Sources */,
 				76BCE67521F5F54300C9FC62 /* Assembly.swift in Sources */,
 				76BCE65221F5F05900C9FC62 /* AppDelegate.swift in Sources */,
+				76BCE68221F605AF00C9FC62 /* PhotoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

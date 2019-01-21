@@ -13,8 +13,8 @@ class PhotosListVC: UIViewController {
     private let viewModel : PhotosListViewModelType
     private let photosListView = UITableView()
     
-    init(photosListViewModelType: PhotosListViewModelType) {
-        self.viewModel = photosListViewModelType
+    init(photosListViewModel: PhotosListViewModelType) {
+        self.viewModel = photosListViewModel
         super.init(nibName: nil, bundle: nil)
         self.layoutViews()
     }
@@ -29,6 +29,12 @@ class PhotosListVC: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension PhotosListVC: PhotosListViewModelDelegate {
+    func reloadData() {
+        self.photosListView.reloadData()
     }
 }
 
