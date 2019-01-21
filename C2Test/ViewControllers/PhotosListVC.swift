@@ -73,6 +73,6 @@ extension PhotosListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let photoItem = self.viewModel.getPhotoForIndex(index: indexPath.row)
         let displayPhotoVC = self.displayPhotoVCFactory.create(photoItem: photoItem)
-        self.navigationController?.pushViewController(displayPhotoVC, animated: true)
+        self.navigationController?.pushViewController(displayPhotoVC, animated: false)
     }
 }
