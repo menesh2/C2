@@ -7,6 +7,7 @@ target 'C2Test' do
 
   # Pods for C2Test
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
   pod 'Cartography'

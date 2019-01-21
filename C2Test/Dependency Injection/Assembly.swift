@@ -36,6 +36,7 @@ class Assembly {
         
         //MARK: - Interactors registration
         self.container.autoregister(PhotosListInteractorType.self, initializer: PhotosListInteractor.init)
+        self.container.autoregister(DisplayPhotoInteractorType.self, initializer: DisplayPhotoInteractor.init)
     }
     
     func getRootViewController() -> UIViewController {
